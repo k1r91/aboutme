@@ -1,0 +1,17 @@
+{
+  "name": "Kirill",
+  "surname": "Cherkasov",
+  "birthday": "1987-01-25",
+  "works": [
+    {
+      "id": 1,
+      "organization": "CJSC Gazstroykomplect"
+    },
+    {
+      "id": 2,
+      "organization": "CJSC Detskiy Mir"
+    }
+  ],
+  "superuser": "cherkasov",
+  "superuserpwd": "dncornho775741"
+}
