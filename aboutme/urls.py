@@ -23,5 +23,10 @@ urlpatterns = [
     re_path(r'^$', main_view),
     path('about/', main_view),
     path('contact/', contact),
-    path('experience/', experience)
+    path('experience/', experience),
+    path('education/', education),
+    path('portfolio/', portfolio),
+    path('services/', services),
+    path('skills/', skills),
+    path('testimonials/', testimonials)
 ]
