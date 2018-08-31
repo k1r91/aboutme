@@ -2,6 +2,17 @@
   "name": "Kirill",
   "surname": "Cherkasov",
   "birthday": "1987-01-25",
+  "about_desc": [
+    "Hello! My name is Cherkasov Kirill and i am a professional system administrator and python developer. I was born in 1987",
+    " in Yekaterinburg, Russia, where i grew up. After graduating from school, I entered the Ural State University named after",
+    " A.M. Gorky to the faculty of Mathematics and Mechanics (speciality: computer science). After graduating",
+    " from university, worked in several organizations (experience section) specializing in system administration.",
+    " In the past few years, I was fascinated by the development of software on the python, and have several own projects.",
+    " In my spare time I like to go in for sports: I go to the gym and play basketball."
+    ],
+  "location": "Yekaterinburg, Russia",
+  "email": "cherkasov.kirill@gmail.com",
+  "phone": "+7-904-9864438",
   "works": [
     {
       "id": 1,
@@ -11,7 +22,5 @@
       "id": 2,
       "organization": "CJSC Detskiy Mir"
     }
-  ],
-  "superuser": "cherkasov",
-  "superuserpwd": "dncornho775741"
+  ]
 }

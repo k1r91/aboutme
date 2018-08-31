@@ -1,36 +1,46 @@
 from django.shortcuts import render, render_to_response
+from .models import Person, Work, Education
 
 # Create your views here.
 
 
 def main_view(request):
-    name = 'Kirill'
-    return render_to_response('about.html', {'page': 'about'})
+    person = Person.objects.all()[0]
+    return render_to_response('about.html', {'page': 'about', 'person': person})
 
 
 def contact(request):
-    return render_to_response('contact.html', {'page': 'contact'})
+    person = Person.objects.all()[0]
+    return render_to_response('contact.html', {'page': 'contact', 'person': person})
 
 
 def experience(request):
-    return render_to_response('experience.html', {'page': 'experience'})
+    person = Person.objects.all()[0]
+    works = Work.objects.all()
+    return render_to_response('experience.html', {'page': 'experience', 'person': person, 'works': works})
 
 
 def education(request):
-    return render_to_response('education.html', {'page': 'education'})
+    person = Person.objects.all()[0]
+    educations = Education.objects.all()
+    return render_to_response('education.html', {'page': 'education', 'person': person, 'educations': educations})
 
 
 def portfolio(request):
-    return render_to_response('portfolio.html', {'page': 'portfolio'})
+    person = Person.objects.all()[0]
+    return render_to_response('portfolio.html', {'page': 'portfolio', 'person': person})
 
 
 def services(request):
-    return render_to_response('services.html', {'page': 'services'})
+    person = Person.objects.all()[0]
+    return render_to_response('services.html', {'page': 'services', 'person': person})
 
 
 def skills(request):
-    return render_to_response('skills.html', {'page': 'skills'})
+    person = Person.objects.all()[0]
+    return render_to_response('skills.html', {'page': 'skills', 'person': person})
 
 
 def testimonials(request):
-    return render_to_response('testimonials.html', {'page': 'testimonials'})
+    person = Person.objects.all()[0]
+    return render_to_response('testimonials.html', {'page': 'testimonials', 'person': person})

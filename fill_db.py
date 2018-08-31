@@ -17,20 +17,50 @@ def run_process(command):
     return process.returncode
 
 
-def fill_db(data):
-    p = Person()
-    p.name = data['name']
-    p.surname = data['surname']
-    p.birthday = data['birthday']
-    p.save()
-    work = Work()
-    work.organization = "Test org"
-    work.site = "http://www.test.ru"
-    work.official_duties = "Test test test"
-    work.position = "test position"
-    work.region = "test_region"
-    work.start_time = datetime.datetime(year=2000, month=1, day=1)
-    work.save()
+def fill_person():
+    with open(os.path.join('json', 'person.json'), 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        p = Person()
+        p.name = data['name']
+        p.surname = data['surname']
+        p.birthday = data['birthday']
+        p.about_desc = ''.join(data['about_desc'])
+        p.location = data['location']
+        p.email = data['email']
+        p.phone = data['phone']
+        p.save()
+
+
+def fill_works():
+    with open(os.path.join('json', 'works.json'), 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        for work in data['works']:
+            tswork = Work()
+            tswork.organization = work['organization']
+            tswork.region = work['region']
+            tswork.site = work['site']
+            tswork.position = work['position']
+            tswork.official_duties = ''.join(work['official_duties'])
+            tswork.start_time = work['start_time']
+            try:
+                tswork.end_time = work['end_time']
+            except KeyError:
+                pass
+            tswork.save()
+
+
+def fill_education():
+    with open(os.path.join('json', 'education.json'), 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        for edu in data['education']:
+            tsedu = Education()
+            tsedu.site = edu['site']
+            tsedu.name = edu['name']
+            tsedu.description = "".join(edu['description'])
+            tsedu.end_date = edu['end_date']
+            tsedu.location = edu['location']
+            tsedu.speciality = edu['speciality']
+            tsedu.save()
 
 
 def create_super_user():
@@ -39,6 +69,7 @@ def create_super_user():
         super = User.objects.create_superuser(sd['name'], sd['email'], sd['pwd'])
         super.save()
 
+
 if __name__ == '__main__':
     db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'db.sqlite3')
     if os.path.exists(db_path):
@@ -46,7 +77,8 @@ if __name__ == '__main__':
         run_process('python3 manage.py makemigrations')
         run_process('python3 manage.py migrate')
 
-    with open(os.path.join('json', 'person.json'), 'r', encoding='utf-8') as f:
-        fill_db(json.load(f))
+    fill_person()
+    fill_works()
+    fill_education()
 
     create_super_user()

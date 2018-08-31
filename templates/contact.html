@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="{% static "main_app/styles/contact.css" %}">
     <link rel="stylesheet" type="text/css" href="{% static "main_app/styles/contact_responsive.css" %}">
     {% endblock %}
-            {% block content %}
+{% block content %}
 			<div class="main_content">
 				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
 					<div class="main_subtitle">What clients say</div>
@@ -58,10 +58,15 @@
 				</div>
 
 			</div>
-            {% endblock %}
+{% endblock %}
 
 {% block scripts %}
-{{block.super}}
+<script src="{% static "main_app/js/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "main_app/styles/bootstrap-4.1.2/popper.js" %}"></script>
+<script src="{% static "main_app/styles/bootstrap-4.1.2/bootstrap.min.js" %}"></script>
+<script src="{% static "main_app/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js" %}"></script>
+<script src="{% static "main_app/plugins/easing/easing.js" %}"></script>
+<script src="{% static "main_app/plugins/parallax-js-master/parallax.min.js" %}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="{% static "main_app/js/contact.js" %}"></script>
 {% endblock %}

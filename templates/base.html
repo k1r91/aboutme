@@ -81,27 +81,27 @@
 						<ul class="general_info_list">
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{% static "main_app/images/icon_1.png" %}" alt=""></div>
-								<div class="general_info_text">Name: <span>Jeremy Smith</span></div>
+								<div class="general_info_text">Name: <span>{{person.name}}&nbsp;{{person.surname}}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"></div>
-								<div class="general_info_text">Location: <span>London UK</span></div>
+								<div class="general_info_text">Location: <span>{{person.location}}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{% static "main_app/images/icon_2.png" %}" alt=""></div>
-								<div class="general_info_text">Date of Birth: <span>August 25, 1991</span></div>
+								<div class="general_info_text">Date of Birth: <span>{{ person.birthday|date:"d.m.Y" }}</span></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{% static "main_app/images/icon_3.png" %}" alt=""></div>
-								<div class="general_info_text"><a href="mailto:contact@linque.com?subject=Job_Inquiry">contactme@templatename.com</a></div>
+								<div class="general_info_text"><a href="mailto:contact@linque.com?subject=Job_Inquiry">{{person.email}}</a></div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{% static "main_app/images/icon_4.png" %}" alt=""></div>
-								<div class="general_info_text">+76 6524 567862 763</div>
+								<div class="general_info_text">{{person.phone}}</div>
 							</li>
 							<li class="d-flex flex-row align-items-center justify-content-start">
 								<div class="general_info_icon d-flex flex-column align-items-start justify-content-center"><img src="{% static "main_app/images/icon_5.png" %}" alt=""></div>
-								<div class="general_info_text"><a href="mailto:contact@linque.com">www.mytemplatename.com</a></div>
+								<div class="general_info_text"><a href="mailto:contact@linque.com">{{person.email}}</a></div>
 							</li>
 						</ul>
 
@@ -137,7 +137,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="{% static "main_app/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js" %}"></script>
 <script src="{% static "main_app/plugins/easing/easing.js" %}"></script>
 <script src="{% static "main_app/plugins/parallax-js-master/parallax.min.js" %}"></script>
-<script src="{% static "main_app/js/custom.js" %}"></script>
 {% endblock %}
 </body>
 </html>

@@ -690,6 +690,7 @@ section
 	line-height: 0.75;
 	text-align: right;
 	white-space: nowrap;
+	margin-right: 15px;
 }
 .exp_content
 {

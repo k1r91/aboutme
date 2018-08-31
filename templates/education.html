@@ -22,51 +22,22 @@
 					<!-- Education -->
 
 					<div class="education">
-						
+						{% for education in educations %}
 						<!-- Education Item -->
 						<div class="edu_item d-flex flex-lg-row flex-column align-items-start justfy-content-start">
-							<div><div class="edu_year">2010</div></div>
-							<div><div class="edu_image"><img src="images/edu_1.png" alt=""></div></div>
+							<div><div class="edu_year">{{education.end_date|date:"Y"}}</div></div>
+							<!--<div><div class="edu_image"><img src="images/edu_1.png" alt=""></div></div>-->
 							<div class="edu_content">
 								<div class="edu_title_container">
-									<div class="edu_title">University of Colorado</div>
-									<div class="edu_subtitle">Developer Diploma PhD</div>
+									<div class="edu_title">{{education.name}}</div>
+									<div class="edu_subtitle">{{education.speciality}}</div>
 								</div>
 								<div class="edu_text">
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien porttitor, dignissim quam sit ame. Proin vitae tortor nec risus tristique efficitur. Aliquam luctus est urna, id aliquam orci tempus sed. Aenean sit amet leo id enim dapibus eleifend. Phasellus ut erat dapibus, tempor sapien non, porta urna.</p>
+									<p>{{education.description}}</p>
 								</div>
 							</div>
 						</div>
-
-						<!-- Education Item -->
-						<div class="edu_item d-flex flex-lg-row flex-column align-items-start justfy-content-start">
-							<div><div class="edu_year">2008</div></div>
-							<div><div class="edu_image"><img src="images/edu_2.png" alt=""></div></div>
-							<div class="edu_content">
-								<div class="edu_title_container">
-									<div class="edu_title">Graphic School</div>
-									<div class="edu_subtitle">Graphic Design Course</div>
-								</div>
-								<div class="edu_text">
-									<p>Ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vitae sapien porttitor, dignissim quam sit ame. Proin vitae tortor nec risus tristique efficitur. Aliquam luctus est urna, id aliquam orci tempus sed. Aenean sit amet leo id enim dapibus eleifend. Phasellus ut erat dapibus, tempor sapien non, porta urna.</p>
-								</div>
-							</div>
-						</div>
-
-						<!-- Education Item -->
-						<div class="edu_item d-flex flex-lg-row flex-column align-items-start justfy-content-start">
-							<div><div class="edu_year">2007</div></div>
-							<div><div class="edu_image"><img src="images/edu_3.png" alt=""></div></div>
-							<div class="edu_content">
-								<div class="edu_title_container">
-									<div class="edu_title">Colorado High School</div>
-									<div class="edu_subtitle">Bachelor Degree - Developer</div>
-								</div>
-								<div class="edu_text">
-									<p>Consectetur adipiscing elit. Phasellus vitae sapien porttitor, dignissim quam sit ame. Proin vitae tortor nec risus tristique efficitur. Aliquam luctus est urna, id aliquam orci tempus sed. Aenean sit amet leo id enim dapibus eleifend. Phasellus ut erat dapibus, tempor sapien non, porta urna.</p>
-								</div>
-							</div>
-						</div>
+						{% endfor %}
 
 					</div>
 
@@ -74,6 +45,11 @@
 			</div>
 {% endblock %}
 {% block scripts %}
-{{ block.super }}
-<script src="js/education.js"></script>
+<script src="{% static "main_app/js/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "main_app/styles/bootstrap-4.1.2/popper.js" %}"></script>
+<script src="{% static "main_app/styles/bootstrap-4.1.2/bootstrap.min.js" %}"></script>
+<script src="{% static "main_app/plugins/mCustomScrollbar/jquery.mCustomScrollbar.js" %}"></script>
+<script src="{% static "main_app/plugins/easing/easing.js" %}"></script>
+<script src="{% static "main_app/plugins/parallax-js-master/parallax.min.js" %}"></script>
+<script src="{% static "main_app/js/education.js" %}></script>
 {% endblock %}
