@@ -18,6 +18,7 @@ def run_process(command):
 
 
 def fill_person():
+    Person.objects.all().delete()
     with open(os.path.join('json', 'person.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
         p = Person()
@@ -32,6 +33,7 @@ def fill_person():
 
 
 def fill_works():
+    Work.objects.all().delete()
     with open(os.path.join('json', 'works.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
         for work in data['works']:
@@ -50,6 +52,7 @@ def fill_works():
 
 
 def fill_education():
+    Education.objects.all().delete()
     with open(os.path.join('json', 'education.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
         for edu in data['education']:
@@ -72,13 +75,13 @@ def create_super_user():
 
 if __name__ == '__main__':
     db_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'db.sqlite3')
-    if os.path.exists(db_path):
-        os.remove(db_path)
-        run_process('python3 manage.py makemigrations')
-        run_process('python3 manage.py migrate')
+    # if os.path.exists(db_path):
+    #     os.remove(db_path)
+    #     run_process('python3 manage.py makemigrations')
+    #     run_process('python3 manage.py migrate')
 
     fill_person()
     fill_works()
     fill_education()
 
-    create_super_user()
+    # create_super_user()
