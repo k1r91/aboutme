@@ -28,5 +28,6 @@ urlpatterns = [
     path('portfolio/', portfolio),
     path('services/', services),
     path('skills/', skills),
-    path('testimonials/', testimonials)
+    path('testimonials/', testimonials),
+    path('organization/<slug:slug>/', organization)
 ]

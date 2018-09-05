@@ -1,10 +1,8 @@
 {
   "works": [
     {
-      "person_id": 0,
-      "organization": "CJSC \"Gazstroykomplekt\"",
+      "org_id": 0,
       "region": "Yekaterinburg, Russia",
-      "site": "http://www.gazsk.ru",
       "position": "Python developer/System administrator",
       "official_duties": [
         "Creation and maintenance of websites of several companies in the holding. Administration of servers based on ",
@@ -16,10 +14,8 @@
       "start_time": "2011-11-01"
     },
     {
-      "person_id": 0,
-      "organization": "LLC \"Milky Kit\"",
+      "org_id": 1,
       "region": "Yekaterinburg, Russia",
-      "site": "http://www.milky-kit.ru/",
       "position": "System administrator",
       "official_duties": [
         "Administration of servers based on Windows 2003, 2008. Maintenance and troubleshooting of network equipment ",
@@ -29,10 +25,8 @@
       "end_time": "2011-10-15"
     },
     {
-      "person_id": 0,
-      "organization": "CJSC \"Detskiy Mir\"",
+      "org_id": 2,
       "region": "Yekaterinburg, Russia",
-      "site": "http://www.detmir.ru",
       "position": "System administrator",
       "official_duties": [
         "Administration of Windows 2003 servers, Oracle SQL, specialized server-based cash programs. Maintenance of ",
@@ -43,10 +37,8 @@
       "end_time": "2008-03-28"
     },
     {
-      "person_id": 0,
-      "organization": "CJSC \"Grossmart\"",
+      "org_id": 3,
       "region": "Yekaterinburg, Russia",
-      "site": "http://www.gazsk.ru",
       "position": "System administrator",
       "official_duties": [
         "Administration of Windows 2003 servers, Oracle SQL, specialized server-based cash programs. Maintenance of ",

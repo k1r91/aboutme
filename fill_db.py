@@ -20,16 +20,18 @@ def run_process(command):
 def fill_person():
     Person.objects.all().delete()
     with open(os.path.join('json', 'person.json'), 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        p = Person()
-        p.name = data['name']
-        p.surname = data['surname']
-        p.birthday = data['birthday']
-        p.about_desc = ''.join(data['about_desc'])
-        p.location = data['location']
-        p.email = data['email']
-        p.phone = data['phone']
+        person = json.load(f)
+        p = Person(**person)
+        p.about_desc = ''.join(person['about_desc'])
         p.save()
+
+def fill_organizations():
+    Organization.objects.all().delete()
+    with open(os.path.join('json', 'organization.json'), 'r', encoding='utf-8') as f:
+        data = json.load(f)
+        for org in data:
+            tsorg = Organization(**org)
+            tsorg.save()
 
 
 def fill_works():
@@ -37,17 +39,15 @@ def fill_works():
     with open(os.path.join('json', 'works.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
         for work in data['works']:
-            tswork = Work()
-            tswork.organization = work['organization']
-            tswork.region = work['region']
-            tswork.site = work['site']
-            tswork.position = work['position']
-            tswork.official_duties = ''.join(work['official_duties'])
-            tswork.start_time = work['start_time']
+            tsorg = Organization.objects.get(id=work['org_id'])
+            del work['org_id']
+            tswork = Work(**work)
+            tswork.organization = tsorg
             try:
                 tswork.end_time = work['end_time']
             except KeyError:
                 pass
+            tswork.official_duties = ''.join(work['official_duties'])
             tswork.save()
 
 
@@ -56,13 +56,8 @@ def fill_education():
     with open(os.path.join('json', 'education.json'), 'r', encoding='utf-8') as f:
         data = json.load(f)
         for edu in data['education']:
-            tsedu = Education()
-            tsedu.site = edu['site']
-            tsedu.name = edu['name']
+            tsedu = Education(**edu)
             tsedu.description = "".join(edu['description'])
-            tsedu.end_date = edu['end_date']
-            tsedu.location = edu['location']
-            tsedu.speciality = edu['speciality']
             tsedu.save()
 
 
@@ -79,7 +74,7 @@ if __name__ == '__main__':
     #     os.remove(db_path)
     #     run_process('python3 manage.py makemigrations')
     #     run_process('python3 manage.py migrate')
-
+    fill_organizations()
     fill_person()
     fill_works()
     fill_education()

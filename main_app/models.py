@@ -1,6 +1,20 @@
 from django.db import models
 
 
+class Organization(models.Model):
+    id = models.IntegerField(verbose_name='id', unique=True, primary_key=True)
+    site = models.URLField(verbose_name='site')
+    name = models.CharField(verbose_name='name', max_length=256)
+    address = models.TextField(verbose_name='address')
+    local_url = models.URLField(verbose_name='local_url')
+    phone = models.CharField(verbose_name='phone', max_length=32)
+    desc = models.TextField(verbose_name='description')
+    slug = models.SlugField(verbose_name='slug', blank=True, null=True)
+
+    def __str__(self):
+        return '{}'.format(self.name)
+
+
 class Person(models.Model):
 
     name = models.CharField(verbose_name='name', blank=True, max_length=128)
@@ -16,9 +30,8 @@ class Person(models.Model):
 
 
 class Work(models.Model):
-    organization = models.CharField(verbose_name='organization', max_length=256)
+    organization = models.ForeignKey(Organization, verbose_name='organization', on_delete=models.CASCADE)
     region = models.CharField(verbose_name='region', max_length=128)
-    site = models.URLField(verbose_name='site')
     position = models.CharField(verbose_name='position', max_length=256)
     official_duties = models.TextField(verbose_name='official_duties')
     start_time = models.DateField(verbose_name='start_time', blank=True)

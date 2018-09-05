@@ -28,6 +28,15 @@ $(document).ready(function()
 
 	setHeader();
 
+	$('.chk_checkbox_input').click(function(){
+	    if ($(this).prop('checked')) {
+	        $('.chk-hideable').addClass('chk-hide')
+	    }
+	    else {
+	        $('.chk-hideable').removeClass('chk-hide')
+	    }
+	})
+
 	$(window).on('resize', function()
 	{
 		setHeader();

@@ -679,6 +679,7 @@ section
 }
 .exp_item:not(:last-child)
 {
+    display:none;
 	margin-bottom: 53px;
 }
 .exp_time
@@ -713,4 +714,12 @@ section
 .exp_text
 {
 	margin-top: 18px;
+}
+.chk-hide
+{
+    display: none !important;
+}
+.chk_checkbox
+{
+    margin-top: 20px;
 }

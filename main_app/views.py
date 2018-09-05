@@ -1,8 +1,12 @@
 from django.shortcuts import render, render_to_response
-from .models import Person, Work, Education
+from .models import Person, Work, Education, Organization
 
 # Create your views here.
 
+
+def organization(request, slug):
+    organization = Organization.objects.get(slug=slug)
+    return render_to_response('organization.html', {'organization': organization})
 
 def main_view(request):
     person = Person.objects.all()[0]

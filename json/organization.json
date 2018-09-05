@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "name": "CJSC \"Gazstroykomplekt\"",
+    "site": "http://www.gazsk.ru",
+    "address": "Russia, Yekaterinburg, Nachdiva-Vasilyeva st., 3a",
+    "local_url": "/gazsk/",
+    "phone": "+7-343-323-32-18",
+    "desc": "Rent, building, implementation of contracts in the oil and gas industry, trade in motor transport means",
+    "slug": "gazsk"
+  },
+  {
+    "id": 1,
+    "name": "LLC \"Milky Kit\"",
+    "site": "http://www.milky-kit.ru/",
+    "address": "Russia, Yekaterinburg, Malysheva, 36",
+    "local_url": "/milky-kit/",
+    "phone": "+7-343-388-05-00",
+    "desc": "Manufacture of dairy products",
+    "slug": "milky-kit"
+  },
+  {
+    "id": 2,
+    "name": "CJSC \"Detskiy Mir\"",
+    "site": "https://www.detmir.ru/‎",
+    "address": "Russia, Yekaterinburg, Halturina, 55",
+    "local_url": "/detmir/",
+    "phone": "+8-800-250-00-00",
+    "desc": "retail sale of children's goods",
+    "slug": "detmir"
+  },
+  {
+    "id": 3,
+    "name": "CJCS \"Grossmart\"",
+    "site": "",
+    "address": "Russia, Yekaterinburg, Nachdiva-Vasilyeva st., 3a",
+    "local_url": "/grossmart/",
+    "phone": "-",
+    "desc": "The company ceased operations (retail).",
+    "slug": "grossmart"
+  }
+]

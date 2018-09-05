@@ -1,13 +1,13 @@
 {
   "education": [
     {
-      "person_id": 0, "name": "Programming course on Geekbrains", "speciality": "Python/django developer",
+      "name": "Programming course on Geekbrains", "speciality": "Python/django developer",
       "description": [
         "Learn DBMS (MySQL), Python beginning and intermediate level, Django framework, HTML, CSS based level. "
       ], "site": "http://www.geekbrains.ru", "end_date": "2017-07-01", "location": "Online-course"
     },
     {
-      "person_id": 0, "name": "Ural State University named after A.M. Gorky",
+      "name": "Ural State University named after A.M. Gorky",
       "speciality": "Bachelor of computer science", "description": [
       "Taught mathematics, physics, computer algorithms, c++, web-site construction through php+html+css, ",
       "and many other interesting subjects. One of the greatest higher education institusions in our country."
@@ -15,14 +15,14 @@
       "location": "Yekaterinburg, Russia"
     },
     {
-      "person_id": 0, "name": "High school #9",
+      "name": "High school #9",
       "speciality": "Mathematics and economy class", "description": [
       "One of the best schools in Yekaterinburg, where I won city, regional and went to the All-Russia Olympiad in Economics."
     ], "end_date": "2004-06-01", "site": "http://xn--9-7sbirdczi9n.xn--80acgfbsl1azdqr.xn--p1ai/",
       "location": "Yekaterinburg, Russia"
     },
     {
-      "person_id": 0, "name": "General education school #170", "speciality": "Common student", "description": [
+      "name": "General education school #170", "speciality": "Common student", "description": [
       "Great school, great memories!"
     ], "end_date": "2002-06-01", "site": "http://xn--170-5cd3cgu2f.xn--80acgfbsl1azdqr.xn--p1ai/",
       "location": "Yekaterinburg, Russia"

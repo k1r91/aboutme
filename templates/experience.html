@@ -13,21 +13,21 @@
 				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
 					<div class="main_subtitle">What I am good at</div>
 					<div class="main_title">My Experience</div>
+                    <div class="main_subtitle chk_checkbox"><input type="checkbox" checked="checked" class="chk_checkbox_input"><span>Show last three jobs</span></div>
 				</div>
 				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
-					
 					<!-- Experience -->
 
 					<div class="experience">
 						{% for work in works %}
 						<!-- Experience Item -->
-						<div class="exp_item d-flex flex-md-row flex-column align-items-start justify-content-start">
+						<div class="{% if forloop.counter > 3 %}chk-hideable chk-hide{%endif%} exp_item d-flex flex-md-row flex-column align-items-start justify-content-start">
 							<div><div class="exp_time">{{work.start_time|date:"m.Y"}}-{% if work.end_time %}{{work.end_time|date:"m.Y"}} {% else %}now{% endif %}
 							</div></div>
 							<div class="exp_content">
 								<div class="exp_title_container">
 									<div class="exp_title">{{work.position}}</div>
-									<div class="exp_subtitle">{{work.organization}}</div>
+									<div class="exp_subtitle"><a href="/organization{{work.organization.local_url}}">{{work.organization}}</a></div>
 								</div>
 								<div class="exp_text">
 									<p>{{work.official_duties}}</p>

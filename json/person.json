@@ -12,15 +12,5 @@
     ],
   "location": "Yekaterinburg, Russia",
   "email": "cherkasov.kirill@gmail.com",
-  "phone": "+7-904-9864438",
-  "works": [
-    {
-      "id": 1,
-      "organization": "CJSC Gazstroykomplect"
-    },
-    {
-      "id": 2,
-      "organization": "CJSC Detskiy Mir"
-    }
-  ]
+  "phone": "+7-904-9864438"
 }
