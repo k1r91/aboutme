@@ -10,6 +10,7 @@ class Organization(models.Model):
     phone = models.CharField(verbose_name='phone', max_length=32)
     desc = models.TextField(verbose_name='description')
     slug = models.SlugField(verbose_name='slug', blank=True, null=True)
+    yandex_map = models.TextField(verbose_name='yandex_map', blank=True, null=True)
 
     def __str__(self):
         return '{}'.format(self.name)

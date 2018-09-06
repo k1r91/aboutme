@@ -3,40 +3,44 @@
     "id": 0,
     "name": "CJSC \"Gazstroykomplekt\"",
     "site": "http://www.gazsk.ru",
-    "address": "Russia, Yekaterinburg, Nachdiva-Vasilyeva st., 3a",
+    "address": "Russia, Yekaterinburg, Nachdiva-Vasilyeva street, 3a",
     "local_url": "/gazsk/",
     "phone": "+7-343-323-32-18",
     "desc": "Rent, building, implementation of contracts in the oil and gas industry, trade in motor transport means",
-    "slug": "gazsk"
+    "slug": "gazsk",
+    "yandex_map": "<iframe src=\"https://yandex.ru/map-widget/v1/-/CBB4U-fbDC\" width=\"450\" height=\"400\" frameborder=\"1\" allowfullscreen=\"true\"></iframe>"
   },
   {
     "id": 1,
     "name": "LLC \"Milky Kit\"",
     "site": "http://www.milky-kit.ru/",
-    "address": "Russia, Yekaterinburg, Malysheva, 36",
+    "address": "Russia, Yekaterinburg, Malysheva street, 36",
     "local_url": "/milky-kit/",
     "phone": "+7-343-388-05-00",
     "desc": "Manufacture of dairy products",
-    "slug": "milky-kit"
+    "slug": "milky-kit",
+    "yandex_map": "<iframe src=\"https://yandex.ru/map-widget/v1/-/CBB4YAce2B\" width=\"560\" height=\"400\" frameborder=\"1\" allowfullscreen=\"true\"></iframe>"
   },
   {
     "id": 2,
     "name": "CJSC \"Detskiy Mir\"",
-    "site": "https://www.detmir.ru/‎",
-    "address": "Russia, Yekaterinburg, Halturina, 55",
+    "site": "https://www.detmir.ru/",
+    "address": "Russia, Yekaterinburg, Halturina street, 55",
     "local_url": "/detmir/",
     "phone": "+8-800-250-00-00",
     "desc": "retail sale of children's goods",
-    "slug": "detmir"
+    "slug": "detmir",
+    "yandex_map": "<iframe src=\"https://yandex.ru/map-widget/v1/-/CBB4YATD~D\" width=\"560\" height=\"400\" frameborder=\"1\" allowfullscreen=\"true\"></iframe>"
   },
   {
     "id": 3,
-    "name": "CJCS \"Grossmart\"",
+    "name": "CJSC \"Grossmart\"",
     "site": "",
-    "address": "Russia, Yekaterinburg, Nachdiva-Vasilyeva st., 3a",
+    "address": "Russia, Yekaterinburg, Sulimova street, 50",
     "local_url": "/grossmart/",
     "phone": "-",
     "desc": "The company ceased operations (retail).",
-    "slug": "grossmart"
+    "slug": "grossmart",
+    "yandex_map": "<iframe src=\"https://yandex.ru/map-widget/v1/-/CBB4YEbODA\" width=\"560\" height=\"400\" frameborder=\"1\" allowfullscreen=\"true\"></iframe>"
   }
 ]

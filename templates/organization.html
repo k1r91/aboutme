@@ -8,16 +8,56 @@
 <link rel="stylesheet" type="text/css" href="{% static "main_app/styles/main_styles.css" %}">
 <link rel="stylesheet" type="text/css" href="{% static "main_app/styles/responsive.css" %}">
 	{% endblock %}
-            {% block content %}
+{% block content %}
 			<div class="main_content">
 				<div class="main_title_container d-flex flex-column align-items-start justify-content-end">
-                    <div class="main_title" style="font-size: 46px;">{{organization.name}}</div>
-                    {% if organization.site %}
-					<div class="main_subtitle" style="margin: 30px 0 0 30px;"><a href="{{organization.site}}">{{organization.site}}</a></div>
-                    {% endif %}
+					<div class="main_title" style="font-size: 38px;">{{organization.name}}</div>
+					<div class="main_subtitle" style="margin: 20px 0 0 20px;"><a href="{{organization.site}}">{{organization.site}}</a></div>
 				</div>
+				<div class="main_content_scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
+
+					<!-- Contact -->
+
+					<div class="contact">
+						<div class="container-fluid">
+							<div class="row">
+
+								<!-- Contact Form -->
+								<div class="col-xl-6">
+									<div class="contact_text">
+										<p style="font-size: 16px;">{{organization.desc|capfirst}}</p>
+									</div>
+									<div class="contact_form_container">
+										<p style="margin-top: 10px;">
+											<img src="/static/main_app/images/icon_4.png" alt="" class="mCS_img_loaded">{{organization.phone}}
+										</p>
+                                        <p>Location: {{organization.address|capfirst}}</p>
+									</div>
+								</div>
+
+								<!-- Contact Map -->
+								<div class="col-xl-6">
+									<div class="contact_map">
+										<!-- Google Map -->
+										<div class="map">
+											<div id="google_map" class="google_map">
+												<div class="map_container">
+													<div id="map">
+                                                        {{organization.yandex_map|safe}}
+                                                    </div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
 			</div>
-            {% endblock %}
+{% endblock %}
 
     {% block scripts %}
     {{block.super}}

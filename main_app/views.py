@@ -1,12 +1,18 @@
-from django.shortcuts import render, render_to_response
+from django.core.exceptions import ObjectDoesNotExist, MultipleObjectsReturned
+from django.shortcuts import render, render_to_response, Http404
 from .models import Person, Work, Education, Organization
 
 # Create your views here.
 
 
 def organization(request, slug):
-    organization = Organization.objects.get(slug=slug)
-    return render_to_response('organization.html', {'organization': organization})
+    try:
+        organization = Organization.objects.get(slug=slug)
+    except ObjectDoesNotExist:
+        raise Http404
+    person = Person.objects.all()[0]
+    return render_to_response('organization.html', {'organization': organization, 'person': person})
+
 
 def main_view(request):
     person = Person.objects.all()[0]
